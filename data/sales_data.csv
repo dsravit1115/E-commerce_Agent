@@ -1,0 +1,5 @@
+customer_name 	email	            region	amount	 date
+John Doe	      john@example.com	North	  1200	   4/10/2024
+Jane Smith    	jane@demo.com	    South	  950	     4/11/2024
+Bob Johnson   	bob@foo.com	      North	  1100	   4/15/2024
+Alice Brown	    alice@bar.com	    West	  875	     4/18/2024
