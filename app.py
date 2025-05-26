@@ -10,6 +10,7 @@ from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 from langchain.docstore.document import Document
 from evaluate_metrics import calculate_context_recall
+from evaluate_metrics import calculate_f1, calculate_bleu, calculate_rouge
 
 # Load .env secrets
 load_dotenv()
@@ -70,3 +71,14 @@ if file:
 
 else:
     st.warning("Please upload a sales CSV file to begin.")
+
+    reference = st.text_input(" Enter reference answer (for metric comparison)")
+
+    if reference:
+       st.markdown("### Evaluation Metrics")
+       f1 = calculate_f1(answer, reference)
+       bleu = calculate_bleu(answer, reference)
+       rouge = calculate_rouge(answer, reference)
+       st.write(f" F1 Score: `{f1:.2f}`")
+       st.write(f" BLEU Score: `{bleu:.2f}`")
+       st.write(f" ROUGE-L F-measure: `{rouge:.2f}`")
