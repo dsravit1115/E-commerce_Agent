@@ -1,0 +1,12 @@
+langchain
+openai
+faiss-cpu
+pandas
+tiktoken
+sentence-transformers
+spacy
+python-dotenv
+transformers
+accelerate
+peft
+bitsandbytes
